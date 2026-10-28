@@ -38,6 +38,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push Docker image to GHCR
-         run: |
+        run: |
           docker tag flask-cicd:v1 ghcr.io/${{ github.repository }}:latest
           docker push ghcr.io/${{ github.repository }}:latest
